@@ -17,4 +17,5 @@ Pod::Spec.new do |s|
        'CLANG_CXX_LANGUAGE_STANDARD' => 'c++0x',
        'CLANG_CXX_LIBRARY' => 'libstdc++'
   }
+  s.requires_arc = false
 end
