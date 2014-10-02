@@ -13,11 +13,12 @@ Pod::Spec.new do |s|
   s.ios.source_files =  'src/{api,common,eventserver,ssdp,upnp}/*.{h,m,mm,c,cpp}', 'src/port/ios/*.{h,m}'
   s.osx.source_files =  'src/{api,common,eventserver,ssdp,upnp}/*.{h,m,mm,c,cpp}', 'src/port/macos/*.{h.m}'
   s.library          = 'stdc++'
+  s.frameworks       = 'stdc++'
   
   s.xcconfig = {
        'CLANG_CXX_LANGUAGE_STANDARD' => 'c++0x',
-       'CLANG_CXX_LIBRARY' => 'libstdc++',
-       'OTHER_LDFLAGS' => '-weak_library /usr/lib/libstdc++.dylib'
+       'CLANG_CXX_LIBRARY' => 'libstdc++'
+       
   }
   s.requires_arc = false
 end
